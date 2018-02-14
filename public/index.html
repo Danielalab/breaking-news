@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar bg-color">
       <a class="navbar-brand" href="#">
         <img src="assets/images/logo.png" width="40" height="40" class="d-inline-block align-top" alt=""> Breaking News
       </a>
@@ -20,32 +20,29 @@
   </header>
 
   <div class="container-fluid">
-    <div class="row">
-      <main id="section-search" class="col-11 col-md-8">
+    <div class="row justify-content-center">
+      <main id="section-search" class="col-11 col-md-9">
         <div class="container-fluid">
           <div class="row">
-            <form class="col-12" id="search-form">
-              <label for="search">¿Qué te interesa hoy?</label>              
+            <form class="col-12 my-3" id="search-form">
+              <label for="search">¿Qué te interesa hoy?</label>
               <div class="row">
                 <div class="col-8">
                   <input type="text" class="form-control" placeholder="e.g. Android" id="search">
                 </div>
-              <button type="submit" class="btn btn-primary col-2" id="btn-subit">Submit</button>                              
+                <button type="submit" class="btn btn-success col-1 mx-2" id="btn-jquery">jquery</button>
+                <button type="submit" class="btn btn-success col-1 mx-2" id="btn-fetch">fetch</button>
               </div>
             </form>
           </div>
           <div class="row" id="news-results">
-
           </div>
         </div>
       </main>
-
-      <section id="section-news" class="col-11 col-md-4">
-
-      </section>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
