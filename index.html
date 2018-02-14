@@ -14,7 +14,7 @@
   <header>
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap
+        <img src="assets/images/logo.png" width="40" height="40" class="d-inline-block align-top" alt=""> Breaking News
       </a>
     </nav>
   </header>
@@ -24,23 +24,24 @@
       <main id="section-search" class="col-11 col-md-8">
         <div class="container-fluid">
           <div class="row">
-            <form>
+            <form class="col-12" id="search-form">
+              <label for="search">¿Qué te interesa hoy?</label>              
               <div class="row">
-                <div class="col">
-                  <label for="search">¿Qué te interesa hoy?</label>
+                <div class="col-8">
                   <input type="text" class="form-control" placeholder="e.g. Android" id="search">
                 </div>
+              <button type="submit" class="btn btn-primary col-2" id="btn-subit">Submit</button>                              
               </div>
             </form>
           </div>
           <div class="row" id="news-results">
-            
+
           </div>
         </div>
       </main>
 
       <section id="section-news" class="col-11 col-md-4">
-        
+
       </section>
     </div>
   </div>
