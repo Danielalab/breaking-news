@@ -72,6 +72,7 @@ $(document).ready(() => {
     getNews();
   };
 
+
   let startSearchFetch = () => {
     event.preventDefault();
     let url = `${urlNYtimes}q=${searchedForText}${keyApi}`;
