@@ -1,10 +1,11 @@
 {
   "name": "breaking-news",
   "version": "1.0.0",
-  "description": "",
+  "description": "Desarrollar una web que tenga un buscador con el cual se obtengan las noticias relacionadas a un tema extraídas de la API New York Times.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,6 @@
   "homepage": "https://github.com/Danielalab/breaking-news#readme",
   "dependencies": {
     "express": "^4.16.2"
-  }
+  },
+  "devDependencies": {}
 }

@@ -44,12 +44,15 @@ $(document).ready(() => {
     $(responseContainer).append(divContainerNews);
   };
 
+  let reset = () => {
+    searchInput.val('');
+  };
+
   // funcionalidad para buscar noticias ajax-jquery
   let addNews = (news) => {
-    console.log(news);
+    responseContainer.html('');    
     let articles = news.response.docs;
     articles.forEach((article) => {
-      console.log(article);
       createSectionNews(article);
     });
   };
@@ -65,31 +68,27 @@ $(document).ready(() => {
       .fail(handleError);
   };
 
-  let startSearch = (event) => {
+  let startSearchAjaxJquery = (event) => { debugger;
     event.preventDefault();
-    responseContainer.html('');
     searchedForText = searchInput.val();
     getNews();
+    reset();
   };
 
 
-  let startSearchFetch = () => {
+  let startSearchFetch = (event) => { debugger;
     event.preventDefault();
+    searchedForText = searchInput.val();
     let url = `${urlNYtimes}q=${searchedForText}${keyApi}`;
+    console.log(url);
     fetch(url)
-      .then(function(result) {
-        console.log(result);
-        return result;
-      })
-      // .then(
-
-      // )
-      .catch(error => {
-        console.log(error);
-      });
+      .then(response => response.json())
+      .then(addNews)
+      .catch(handleError);
+    reset();
   };
 
   // asociando eventos a funciones
-  btnJquery.on('click', startSearch);
+  btnJquery.on('click', startSearchAjaxJquery);
   btnBreakingNews.on('click', startSearchFetch);
 });
